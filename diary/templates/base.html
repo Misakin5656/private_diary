@@ -18,6 +18,8 @@
         rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    <!-- My style -->
+    <link rel="stylesheet" type="text/css" href="{% static'css/mystyle.css' %}">
     {% block head %}{% endblock %}
 </head>
 
@@ -30,6 +32,13 @@
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
                     class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
+
+                <ul class="navbar-nav ms-auto"></ul>
+                <li class="nav-item{% block active_inquiry %}{% endblock%}">
+                    <a class="nav-link" href="{% url 'diary:inquiry' %}">INQUIRY</a>
+                </li>
+                </ul>
+
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#!">Sign Up</a></li>
                     <li class="nav-item"><a class="nav-link" href="#!">Log In</a></li>
