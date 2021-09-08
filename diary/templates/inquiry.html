@@ -3,10 +3,11 @@
 
 {% block title %} お問い合わせ|Private Diary {% endblock %}
 
+{% block active_inquiry %}active{% endblock%}
+
 {% block contents %}
-<!-- Content section 1-->
-<section id="scroll">
-    <div class="container px-5">
+<div class="container">
+    <div class="row">
         <div class="my-div-style">
             <form method="POST">
                 {% csrf_token %}
@@ -31,5 +32,5 @@
             </form>
         </div>
     </div>
-</section>
+</div>
 {% endblock %}
