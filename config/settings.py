@@ -158,3 +158,21 @@ ACCOUNT_USERNAME_REQUIRED = False
 #サインアップにメールアドレス確認をはさむよう設定
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_EMAIL_REQUIRED = True
+
+#ログイン/ログアウト後の遷移先を設定
+LOGIN_REDIRECT_URL='diary:index'
+ACCOUNT_LOGOUT_REDIRECT_URL='account_login'
+
+#ログアウトリンクのクリック一発でログアウトする設定
+ACCOUNT_LOGOUT_ON_GET=True
+
+#django-allauthが送信するメールの県名に自動付与される接頭辞をブランクに設定する
+ACCOUN_EMAIL_SUBJECT_PREFIX=''
+
+#デフォルトのメール送信元を設定
+DEFAULT_FROM_EMAIL='admin@example.com'
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+MEDIA_URL = '/media'
