@@ -32,9 +32,10 @@ class InquiryView(generic.FormView):
         logger.info('Inquiry sent by {}'.format(form.cleaned_data['name']))
         return super().form_valid(form)
 
+
+
 from django.contrib.auth.mixins import LoginRequiredMixin
 from.models import Diary
-
 
 class DiaryListView(LoginRequiredMixin,generic.ListView):
     model=Diary
