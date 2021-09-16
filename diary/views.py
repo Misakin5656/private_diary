@@ -94,6 +94,6 @@ class DiaryDeleteView(LoginRequiredMixin, generic.DeleteView):
     form_class = DiaryCreateForm
     success_url = reverse_lazy('diary:diary_list')
 
-    def delete(self, request, *args, **kwargs):
-        messages.success(self, request, '日記を削除しました。')
+    def delete(self,request,*args,**kwargs):
+        messages.success(self.request, '日記を削除しました。')
         return super().delete(request, *args, **kwargs)
